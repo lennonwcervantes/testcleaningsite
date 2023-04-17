@@ -1,0 +1,14 @@
+Yes, it is possible to build a login page without using cookies. One way to accomplish this is to use session IDs in the URL instead of cookies.
+
+When a user logs in, the server can generate a unique session ID and include it in the URL of the subsequent pages the user visits. The server can then use this session ID to track the user's session and maintain their login state.
+
+For example, after a user logs in, the server could redirect them to a URL like this:
+
+https://example.com/dashboard?session_id=abcdef123456
+
+The server can then read the session ID from the URL on subsequent requests and use it to authenticate the user and maintain their login state.
+
+However, it is worth noting that using session IDs in the URL can have security implications, as the session ID can be exposed in the browser's history and server logs. Additionally, some browsers and web servers may have limits on the length of URLs, which can impact the use of session IDs in this way. Therefore, it may be advisable to use other methods for maintaining login state, such as server-side sessions or tokens.
+
+
+
